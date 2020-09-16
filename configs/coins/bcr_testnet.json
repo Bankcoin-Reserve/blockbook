@@ -1,9 +1,9 @@
 {
   "coin": {
-    "name": "PIVX Testnet",
-    "shortcut": "tPIVX",
-    "label": "PIVX Testnet",
-    "alias": "pivx_testnet"
+    "name": "BCR Testnet",
+    "shortcut": "tBCR",
+    "label": "BCR Testnet",
+    "alias": "bcr_testnet"
   },
   "ports": {
     "backend_rpc": 18049,
@@ -14,14 +14,14 @@
   "ipc": {
     "rpc_url_template": "http://127.0.0.1:{{.Ports.BackendRPC}}",
     "rpc_user": "rpc",
-    "rpc_pass": "pivxrpc",
+    "rpc_pass": "bcrrpc",
     "rpc_timeout": 25,
     "message_queue_binding_template": "tcp://127.0.0.1:{{.Ports.BackendMessageQueue}}"
   },
   "backend": {
-    "package_name": "backend-pivx",
+    "package_name": "backend-bcr",
     "package_revision": "satoshilabs-1",
-    "system_user": "pivx",
+    "system_user": "bcr",
     "version": "4.0.0",
     "binary_url": "https://github.com/PIVX-Project/PIVX/releases/download/v4.0.0/pivx-4.0.0-x86_64-linux-gnu.tar.gz",
     "verification_type": "sha256",
@@ -44,8 +44,8 @@
     }
   },
   "blockbook": {
-    "package_name": "blockbook-pivx-testnet",
-    "system_user": "blockbook-pivx",
+    "package_name": "blockbook-bcr-testnet",
+    "system_user": "blockbook-bcr",
     "internal_binding_template": ":{{.Ports.BlockbookInternal}}",
     "public_binding_template": ":{{.Ports.BlockbookPublic}}",
     "explorer_url": "",
@@ -61,7 +61,7 @@
     }
   },
   "meta": {
-    "package_maintainer": "PIVX team",
-    "package_maintainer_email": "random.zebra@protonmail.com"
+    "package_maintainer": "BCR team",
+    "package_maintainer_email": "support@bcr-gold.io"
   }
 }
